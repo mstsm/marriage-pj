@@ -7,8 +7,8 @@
 
 ## QRコードを読み込み
 スマートフォンのQRリーダーアプリを立ち上げてQRコードを読み込む。
+![pattern-qr](https://user-images.githubusercontent.com/13913407/64484819-ac37cc80-d252-11e9-9093-369535d74b54.png)
 
-![pattern-qr](https://user-images.githubusercontent.com/13913407/64484776-0e440200-d252-11e9-968e-9b7ab8d67a32.png)
 
 ## ARマーカーを読み込む
 カメラが起動されたら、ARマーカーにカメラを向ける。
@@ -17,5 +17,4 @@
 
 
 ## AR+QRマーカー
-
-![pattern-qr](https://user-images.githubusercontent.com/13913407/64484776-0e440200-d252-11e9-968e-9b7ab8d67a32.png)
+![pattern-qr](https://user-images.githubusercontent.com/13913407/64484819-ac37cc80-d252-11e9-9093-369535d74b54.png)
