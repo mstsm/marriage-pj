@@ -16,4 +16,4 @@
 
 
 ## AR+QRマーカー
-![pattern-qr](https://user-images.githubusercontent.com/13913407/64482785-40923700-d233-11e9-9afe-0fb950cd94dc.png)
+![pattern-図1](https://user-images.githubusercontent.com/13913407/64483161-bf3da300-d238-11e9-98a3-d3aea3529b7f.png)
