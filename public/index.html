@@ -10,19 +10,22 @@
 
     <!-- <a-scene embedded arjs>  -->
       <!-- オブジェクトとマテリアル -->
-
       <!-- ARマーカーの指定 & 表示モデルの指定 -->
-      
       <!--      
       <a-marker preset="hiro">    
-          <a-box position='0 0.5 0' material='color: yellow;'></a-box>
-          <a-text value="Welcome!" position="0 1.3 0" align="center"></a-text> 
-      </a-marker>
       -->
+      <a-assets>
+        <a-asset-item id="obj" src="./model/obj.obj"></a-asset-item>   <!-- objファイル -->
+        <a-asset-item id="mtl" src="./model/obj.mtl"></a-asset-item>   <!-- mtlファイル -->
+      </a-assets>
 
       <a-marker type='pattern' url='./marker/pattern-qr.patt' smoothTolerance='0.01'	smooth='false' smoothCount='20'><!--  smoothCount='5'-->
           <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
           <a-text value="Welcome!" position="0 1.3 0" rotation="-90 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
+          <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
+          <a-obj-model src="#obj" mtl="#mtl" scale="0.005 0.005 0.005" position="0 0.5 0">
+            <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite"></a-animation>
+          </a-obj-model>
       </a-marker> 
       
 
@@ -31,8 +34,6 @@
 
     </a-scene>
 
-    
-    
     <div class="ui">
         <!-- 撮った画像をプレビューするための`img`要素 -->
         <img id="snap">
