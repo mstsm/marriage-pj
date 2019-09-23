@@ -1,6 +1,6 @@
 # Blender v2.76 (sub 0) OBJ File: 'eyeball.blend'
 # www.blender.org
-mtllib obj.mtl
+mtllib eyeball.mtl
 o eyeball_1.003_eye_1.003
 v -0.529345 0.050624 1.896416
 v -0.530972 0.025354 1.896426
