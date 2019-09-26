@@ -25,7 +25,7 @@
         <a-asset-item id="mtl" src="eyeball.mtl"></a-asset-item>
         -->
         <!-- 3Dモデルをプリロード -->
-        <a-asset-item id="kizuna" src="scene.gltf"></a-asset-item>
+        <a-asset-item id="kizuna" src="motiontest.gltf"></a-asset-item>
       </a-assets>
       <a-marker type='pattern' url='./marker/pattern-qr.patt' smoothTolerance='0.01'	smooth='false' smoothCount='20'><!--  smoothCount='5'-->
           <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
@@ -40,9 +40,9 @@
           <!-- idを指定して3Dモデルを表示 -->
           --<a-entity gltf-model="#kizuna" scale="0.00004 0.00004 0.00004" position="0 1 0" rotation="-90 0 0" animation-mixer></a-entity>
           <!--https://aframe.io/docs/0.9.0/primitives/a-gltf-model.html-->
-          <!--
-          <a-gltf-model src="#kizuna" scale="2 2 2" position="0 1 0" rotation="-90 0 0" animation-mixer></a-gltf-model>
-          -->
+          <!---->
+          <a-gltf-model src="#kizuna" scale="1 1 1" position="0 1 0" rotation="-90 0 0" animation-mixer></a-gltf-model>
+          
       </a-marker> 
 
       <!-- カメラ読み込み -->
