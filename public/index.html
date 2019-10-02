@@ -18,14 +18,12 @@
 <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 -->
 <!--https://voyagerlab.hatenablog.com/entry/2019/08/01/013741-->
-
 <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 
 
   <body style='margin : 0px; overflow: hidden;'>
-      
     <!--
     <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
     -->
@@ -40,12 +38,12 @@
       <a-assets>
           <!-- 3Dモデルをプリロード -->
         <!--<a-asset-item id="kizuna" src="/model/scene.gltf"></a-asset-item>-->
-        <a-asset-item id="hondo" src="/hondodance/hondodance.gltf"></a-asset-item>
+        <a-asset-item id="hondo" src="/hondo/hondo.gltf"></a-asset-item>
       </a-assets>
       <a-marker type='pattern' url='./marker/pattern-qr.patt' smoothTolerance='0.01'	smooth='false' smoothCount='20'><!--  smoothCount='5'-->
           <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
           <!--<a-text value="Welcome!" position="0 1.3 0" rotation="-90 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>-->
-          <a-text value="Welcome Wedding!!" position="0 1.0 1" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
+          <a-text value="Welcome Wedding!!" position="0 1.0 0" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
           <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
           <!--
           <a-obj-model src="#obj" mtl="#mtl" scale="0.4 0.4 0.4" position="0 0.5 0" rotation="-90 0 0">
@@ -54,7 +52,7 @@
           -->
           <!-- idを指定して3Dモデルを表示 -->
           <!--<a-entity gltf-model="#kizuna" scale="0.00004 0.00004 0.00004" position="-1 1 0" rotation="-90 0 0" animation-mixer></a-entity>-->
-          <a-entity gltf-model="#hondo" scale="0.1 0.1 0.1" position="0 0 0" rotation="0 0 0" animation-mixer></a-entity>
+          <a-entity gltf-model="#hondo" animation-mixer="loop:pingpong;" scale="0.1 0.1 0.1" position="0 0 0" rotation="0 0 0"></a-entity>
           <!--https://aframe.io/docs/0.9.0/primitives/a-gltf-model.html-->
           <!--
           <a-gltf-model src="#kizuna" scale="0.001 0.001 0.001" position="0 1 0" rotation="-90 0 0" animation-mixer></a-gltf-model>
