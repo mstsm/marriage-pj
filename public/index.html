@@ -31,16 +31,14 @@
       <a-assets>
           <!-- 3Dモデルをプリロード -->
         <a-asset-item id="hondo" src="/hondodance/hondodance.gltf"></a-asset-item>
+        <img id="message"" src="message_test.jpg">
       </a-assets>
       <a-marker type='pattern' url='./marker/pattern-qr.patt' smoothTolerance='0.01'	smooth='false' smoothCount='20'><!--  smoothCount='5'-->
           <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
-          <a-text value="Welcome Wedding!!" position="0 1.0 0.5" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
-          <!-- マーカーの場所に OBJ 形式の 3DCG を置く -->
           <!--
-          <a-obj-model src="#obj" mtl="#mtl" scale="0.4 0.4 0.4" position="0 0.5 0" rotation="-90 0 0">
-            <a-animation attribute="rotation" to="0 360 0" dur="3000" easing="linear" repeat="indefinite"></a-animation>
-          </a-obj-model>
+          <a-text value="Welcome Wedding!!" position="0 1.0 0.5" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
           -->
+          <a-image src="#message" width="2" height="2" rotation="0 0 0" position="0 2 0"></a-image>
           <!-- idを指定して3Dモデルを表示 -->
           <!--<a-entity gltf-model="#kizuna" scale="0.00004 0.00004 0.00004" position="-1 1 0" rotation="-90 0 0" animation-mixer></a-entity>-->
           <a-entity gltf-model="#hondo" scale="10 10 10" position="0 0 0" animation-mixer></a-entity>
