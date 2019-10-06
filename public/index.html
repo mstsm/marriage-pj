@@ -2,57 +2,34 @@
 <html>
 <!-- A-Frame ライブラリの読み込み -->
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-
 <!-- AR.js ライブラリの読み込み -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
-
 <!-- glTFのアニメーションを再生するための-->
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
 
-<!--https://github.com/nicolocarpignoli/nicolocarpignoli.github.io/blob/master/ar-playground/index.html-->
-<!--
-<script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
--->
-
-
   <body style='margin : 0px; overflow: hidden;'>
-    <!--
-    <a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled: false">
-    -->
     <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
-    
-    <!-- <a-scene embedded arjs>  -->
-      <!-- オブジェクトとマテリアル -->
-      <!-- ARマーカーの指定 & 表示モデルの指定 -->
-      <!--      
-      <a-marker preset="hiro">    
-      -->
       <a-assets>
           <!-- 3Dモデルをプリロード -->
-        <a-asset-item id="hondo" src="/hondodance/hondodance.gltf"></a-asset-item>
-        <img id="message"" src="message_test.jpg">
+          <a-asset-item id="hondo1" src="model/hondodance/hondodance.gltf"></a-asset-item>
+          <a-asset-item id="mizu1" src="model/mizuki-sandance/mizuki-sandance.gltf"></a-asset-item>
+          <!--
+          <img id="message"" src="message_test.jpg">
+          -->
       </a-assets>
       <a-marker type='pattern' url='./marker/pattern-qr.patt' smoothTolerance='0.01'	smooth='false' smoothCount='20'><!--  smoothCount='5'-->
           <!--<a-box position='0 0.5 0' material='color: yellow;'></a-box> -->
+          <a-text value="Welcome Dance!!" position="0 1.0 0.5" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
           <!--
-          <a-text value="Welcome Wedding!!" position="0 1.0 0.5" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
+          <a-image src="#message" width="1.0" height="0.2" rotation="0 0 0" position="0 3 0"></a-image>
           -->
-          <a-image src="#message" width="1.5" height="0.5" rotation="0 0 0" position="0 3 0"></a-image>
           <!-- idを指定して3Dモデルを表示 -->
-          <!--<a-entity gltf-model="#kizuna" scale="0.00004 0.00004 0.00004" position="-1 1 0" rotation="-90 0 0" animation-mixer></a-entity>-->
-          <a-entity gltf-model="#hondo" scale="10 10 10" position="0 0 0" animation-mixer></a-entity>
-          <!--https://aframe.io/docs/0.9.0/primitives/a-gltf-model.html-->
-          <!--
-          <a-gltf-model src="#kizuna" scale="0.001 0.001 0.001" position="0 1 0" rotation="-90 0 0" animation-mixer></a-gltf-model>
-          -->
+          <a-entity gltf-model="#hondo1" scale="10 10 10" position="-1 0 0" animation-mixer></a-entity>
+          <a-entity gltf-model="#mizu1" scale="6.5 6.5 6.5" position="1 0 0" animation-mixer></a-entity>
       </a-marker> 
-
       <!-- カメラ読み込み -->
       <a-entity camera></a-entity>
-
     </a-scene>
-
     <div class="ui">
         <!-- 撮った画像をプレビューするための`img`要素 -->
         <img id="snap">
