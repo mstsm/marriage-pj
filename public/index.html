@@ -13,12 +13,12 @@
           <!-- モデルをプリロード -->
           <a-asset-item id="hondo1" src="model/hondodance/hondodance.gltf"></a-asset-item>
           <a-asset-item id="mizu1" src="model/mizuki-sandance/mizuki-sandance.gltf"></a-asset-item>
-          <img id="message" src="message/message_test3.png">
+          <img id="message" src="message/message_test2.png">
           
       </a-assets>
       <a-marker type='pattern' url='./marker/pattern-qr.patt' smoothTolerance='0.01'	smooth='false' smoothCount='20'><!--  smoothCount='5'-->
           <a-text value="Welcome Dance!!" position="0 1.0 0.5" rotation="1 0 0" width="5" height="3" material="color:#808080" align="center"></a-text>
-          <a-image src="#message" width="1.0" height="0.5" rotation="0 0 0" position="0 2 0"></a-image>
+          <a-image src="#message"  rotation="0 0 0" position="0 3 0"></a-image>
           <a-entity gltf-model="#hondo1" scale="10 10 10" position="-0.5 0 0" animation-mixer></a-entity>
           <a-entity gltf-model="#mizu1" scale="6.5 6.5 6.5" position="0.5 0 0" animation-mixer></a-entity>
       </a-marker> 
